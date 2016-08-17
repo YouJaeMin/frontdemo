@@ -1,0 +1,73 @@
+톰켓
+http://tomcat.apache.org/
+
+conf폴더 server.xml 파일 수정
+<Connector port="8090" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" URIEncoding="UTF-8"/>
+
+
+html5 공부  /////////
+https://www.w3.org/
+https://www.w3.org/standards/webdesign/htmlcss
+
+http://www.w3schools.com/
+http://koreahtml5.kr/
+
+javascript
+
+
+웹 표준 및 웹 문서
+
+http://www.tta.or.kr/data/ttas_view.jsp?pk_num=TTAK.OT-10.0003/R1
+
+http://www.wah.or.kr/
+
+
+웹 프로그램
+1. frontend(client) - HTML, CSS, JavaScript, Ajax, Json, XML
+2. backend(server) - servlet, jsp, spring
+
+웹문서 3대 구성
+1. HTML
+2. CSS
+3. JavaScript
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
