@@ -3,14 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <title>html_003_css</title>
+<!-- external style(외부 스타일) 정의할때 내부 보다 먼저 -->
+<!-- href - 위치,  rel - 관계,  type - 무엇으로 만들고 무엇으로 사용하는가 -->
+<link href="outer.css" rel="stylesheet" type="text/css" />
 
-
-<!-- interanl style(내부스타일) -->
+<!-- interanl style(내부 스타일) -->
 <style type="text/css">
-	#one {
-		background-color: blue;
-	}
+/* # id */
+#one {
+	background-color: blue;
+}
 </style>
+
 </head>
 <body>
 
