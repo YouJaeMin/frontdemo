@@ -34,9 +34,15 @@ http://www.wah.or.kr/
 3. JavaScript - 동작
 
 
+HTML4 -> XHTML1.0 -> XML 
+				  -> HTML5 현재
 
-
-
+<html>
+	<head>
+	</head>
+	<body>
+	</body>
+</html>
 
 
 
