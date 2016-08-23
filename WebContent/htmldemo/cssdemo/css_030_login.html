@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css_030_login</title>
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+body {
+	margin: 50px;
+}
+
+.loginMenu {
+	width: 278px;
+	height: 98px;
+	border: 1px solid #00B3DC;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	position: relative;
+}
+
+.hidden {
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	text-indent: -2000px;
+}
+
+input {
+	border: 1px solid #00B3DC;
+}
+
+.loginMenu input#remember {
+	position: absolute;
+	left: 65%;
+	top: 10px;
+}
+
+.loginMenu label {
+	font: 11px/20px nanumgothic, "굴림체", dotum, sans-serif;
+	position: absolute;
+	left: 70%;
+	top: 7px;
+}
+
+.loginMenu input#loginBtn {
+	position: relative;
+	top: 5px;
+	left: 2%;
+}
+
+.loginMenu span a {
+	position: absolute;
+	left: 20px;
+	top: 60%;
+	text-decoration: none;
+	color: #00B3DC;
+	top: 60%;
+}
+</style>
+</head>
+<body>
+
+	<div id="wrap">
+		<form method="post" action="#">
+			<fieldset class="loginMenu">
+				<legend class="hidden"> 로그인 </legend>
+				<input type="text" id="id" name="id" tabindex="1" title="아이디입력"
+					accesskey="i" /> <input type="password" id="password"
+					name="password" tabindex="2" title="비밀번호입력" accesskey="p" /> <input
+					type="checkbox" id="remember" tabindex="3" name="remember"
+					accesskey="r" /> <label for="remember">아이디 저장</label> <input
+					type="image" id="loginBtn" src="../images/signin.gif" accesskey="l"
+					tabindex="4" /> <span><a href="#">회원가입</a></span>
+			</fieldset>
+
+		</form>
+	</div>
+
+
+</body>
+</html>
