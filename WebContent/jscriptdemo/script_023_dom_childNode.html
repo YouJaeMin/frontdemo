@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_023_dom_childNode</title>
+<style type="text/css">
+</style>
+
+<script type="text/javascript">
+	
+</script>
+</head>
+<body>
+
+	<div id="wrap">
+		<p>content</p>
+		<a href="">세미나 장소</a> 
+		<span><a href="">정보</a>ttt</span>
+	</div>
+
+
+	<script type="text/javascript">
+		//div요소의 모든 자식노드를 리턴한다.	
+		var divChildNode = document.getElementById("wrap").childNodes;
+		document.write("divChildNode" + divChildNode.length + "<br/>");
+
+		//div요소의 엘리먼트(요소) 노드만 리턴한다.
+		var divChild = document.getElementById("wrap").children;
+		alert("divChild" + divChild.length + "<br/>");
+		//0번째 인덱스 span요소 첫번째 자식요소에 backgroundColor을 red로 설정한다.
+		var sNode= document.getElementsByTagName("span")[0].firstChild.style.backgroundColor="red";
+		
+	</script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_010_String</title>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	
+</script>
+</head>
+<body>
+
+	<!--  
+	
+-->
+
+	<script type="text/javascript">
+		var data = 'It\'s alight';
+		document.write(data + "<br/>");
+
+		var data2 = "hello \
+		dolly";
+		document.write(data2 + "<br/>");
+
+		document.write(data2.length + "<br/>");
+
+		/*
+		특정범위 데이터를 리턴해주는 3가지 메소드
+		1. slice(start, end);
+		2. substring(strat, end);
+		3. substr(start, length);
+		 */
+
+		var str = "Apple, Banana, Kiwi";
+		// 7인덱스에서 부터 13미만 인덱스 까지
+		document.write(str.slice(7, 13) + "<br/>");
+		// 뒤에서 부터 읽기 시작은 -1로 시작
+		document.write(str.slice(-12, -6) + "<br/>");
+
+		document.write(str.substring(7, 13) + "<br/>");
+		// substring()은 음수 값을 지원 하지 않는다.
+		document.write(str.substring(-12, -6) + "<br/>");
+
+		// 7번째 인덱스부터 6개의 글자를 읽는다.
+		document.write(str.substr(7, 6) + "<br/>");
+
+		str = "please visit Microsoft! and Microsoft\<br\>Microsoft";
+		document.write(str.replace("Microsoft", "W3Schools") + "<br/>");
+
+		// 정규 표현식으로 여러개를 한번에 바꿀수 있다.
+		// /문자/ig  /:정규식, i:대소문자 구분않함, g:여러번 반복한다
+		document.write(str.replace(/Microsoft/ig, "W3Schools") + "<br/>");
+
+		var text1 = "Hello World";
+		// 대소문자 변환
+		document.write(text1.toUpperCase() + "<br/>");
+		document.write(text1.toLowerCase() + "<br/>");
+
+		var text2 = "javascript";
+		document.write(text1.concat(" ", text2) + "<br/>");
+
+		var str2 = "HELLO WORLE";
+		document.write(str2.charAt(0) + "<br/>");
+		// 아스키코드값으로 리턴
+		document.write(str2.charCodeAt(0) + "<br/>");
+		document.write(str2[0] + "<br/>");
+
+		var txt = "a,b,c,d,e"; // string
+		var arr = txt.split(","); //string -> array
+		document.write(arr[1] + "<br/>");
+		// 인덱스를 가지고 온다.
+		for ( var index in arr) {
+			document.write(arr[index] + "<br/>");
+		}
+		document.write("<hr/><br/>");
+		var txt2 = "hijklmn";
+		var arr2 = txt2.split("");
+		for ( var index in arr2) {
+			document.write(arr2[index] + "<br/>");
+		}
+
+		document.write("<hr/>");
+
+		var str3 = "The rain in SPAIN stays mainly in the plain";
+		var res = str3.match(/ain/g);
+		// 검색데이터와 일치하는 문자열이 없으면 null을 반환
+		document.write(res + "<br/>");
+
+		var str4 = "The rain in SPAIN stays mainly in the plain";
+		var res2 = str4.match(/ain/gi);
+		document.write(res2 + "<br/>");
+
+		var str5 = "Visit W3Schools!";
+		var n = str.search("W3Schools");
+		// 검색데이터와 일치하는 문자열이 없으면 -1을 반환
+		document.write(n + "<br/>");
+
+		document.write("<hr/>");
+
+		var data = 10;
+		document.write(typeof data + "," + typeof String(data) + "<br/>");
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

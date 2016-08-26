@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_015_Array</title>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	
+</script>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var fruits = [ "Banana", "Orange", "Apple", "Mango" ];
+
+		// array -> string
+		document.write(typeof fruits.toString() + "<br/>");
+		document.write(typeof String(fruits) + "<br/>");
+
+		document.write(fruits.join() + "<br/>"); // Banana,Orange,Apple,Mango
+		document.write(typeof fruits.join() + "<br/>");
+		document.write(fruits.join(" * ") + "<br/>"); // Banana * Orange * Apple * Mango
+		document.write(typeof fruits.join(" * ") + "<br/>");
+
+		document.write("<hr/>");
+		document.write(fruits.push("Kiwi"));
+		document.write(fruits + "<br/>");
+		document.write(fruits.pop() + "<br/>");
+		document.write(fruits + "<br/>");
+		document.write("<hr/>");
+
+		document.write(fruits.unshift("Kiwi"));
+		document.write(fruits + "<br/>");
+		document.write(fruits.shift() + "<br/>");
+		document.write(fruits + "<br/>");
+		document.write("<hr/>");
+
+		var fruits2 = [ "Banana", "Orange", "Apple", "Mango" ];
+		document.write(fruits2 + "<br/>");
+		// 2인덱스 부터 1개를 삭제한후 데이터를 추가한다.
+		fruits2.splice(2, 1, "Lemon", "Kiwi");
+		document.write(fruits2 + "<br/>");
+		document.write("<hr/>");
+
+		var myGirls = [ "Cecilie", "Lone" ];
+		var myBoys = [ "Emil", "Tobias", "Linus" ];
+		document.write(myGirls.concat(myBoys) + "<br/>");
+		document.write("<hr/>");
+
+		document.write(fruits2.sort() + "<br/>");
+		document.write(fruits2 + "<br/>");
+		document.write(fruits2.reverse() + "<br/>");
+		document.write("<hr/>");
+
+		var point = [ 40, 100, 1, 5, 10 ];
+		document.write(point + "<br/>");
+		document.write(point.sort() + "<br/>");
+
+		// 숫자 sort 함수
+		// 오름차순
+		document.write(point.sort(function(a, b) {
+			return a - b;
+		}) + "<br/>");
+		// 내림차순
+		document.write(point.sort(function(a, b) {
+			return b - a;
+		}) + "<br/>");
+
+		document.write("<hr/>");
+		document.write(point.reduce(function getSum(total, num) {
+			return total + num;
+		}) + "<br/>");
+	</script>
+
+</body>
+</html>
