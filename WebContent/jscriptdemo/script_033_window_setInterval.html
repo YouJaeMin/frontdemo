@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_033_window_setInterval</title>
+<style type="text/css">
+</style>
+
+<script type="text/javascript">
+	/*
+	var i = 0;
+	// setInterval("실행한 스크립트", 시간 간격);
+	// 일정한 시간 간격으로 실행한 스크립트를 반복하여 실행시킬때 사용한다.
+	var auto = window.setInterval("console.log(i++);", 3000);
+
+	window.onload = function() {
+		var pNode = document.getElementById("cnt");
+		var bNode = document.getElementById("stop");
+		bNode.onclick = function() {
+			window.clearInterval(auto);
+		};
+
+	};
+	 */
+	var j = 0;
+	window.onload = function() {
+		var is = true;
+		var pNode = document.getElementById("cnt");
+		var bNode = document.getElementById("stop");
+
+		var auto = window.setInterval(test, 100);
+
+		bNode.onclick = function() {
+			if (is) {
+				// clarInterval(참조변수);
+				// auto에 참조되어 있는 setInterval()을 삭제한다.
+				window.clearInterval(auto);
+				is = false;
+			} else {
+				auto = window.setInterval(test, 100);
+				is = true;
+			}
+
+		};
+
+		function test() {
+			pNode.innerHTML = j++;
+// 			var date = new Date();
+// 			pNode.innerHTML = date;
+
+		}
+		;
+	};
+</script>
+</head>
+<body>
+	<p id="cnt">&nbsp;</p>
+	<button id="stop">정지버튼</button>
+
+</body>
+</html>
+
+
+
+
+
+
