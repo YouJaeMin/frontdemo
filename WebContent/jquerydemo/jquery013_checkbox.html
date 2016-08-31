@@ -9,7 +9,7 @@
 <script>
 	$(document).ready(function() {
 		$(".check_all").click(function() {
-			var chk = $(this).is(":checked");
+			var chk = $(this).prop("checked");
 			if (chk) {
 				$(".chk").prop('checked', true);
 			} else {
@@ -39,9 +39,7 @@
 				<th>작성자</th>
 			</tr>
 			<tr>
-				<td>
-					<input type="checkbox" class="chk">
-				</td>
+				<td><input type="checkbox" class="chk"></td>
 				<td>title1</td>
 				<td>writer1</td>
 			</tr>
