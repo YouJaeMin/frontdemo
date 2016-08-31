@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery006_bind</title>
+<style type="text/css">
+</style>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+	$(document).ready(function() {
+		var dNode = $("div").text();// 문자열 리턴
+		var dNode2 = $("div").html(); // 자식요소와 문자열 리턴
+		// 		alert(dNode + ", " + dNode2);
+		var iNode = $("input").val();
+// 		alert(iNode);
+		
+		$("button").bind("click", function () {
+			$("span").text("dom");
+			$("input").val("library");
+		});
+
+	}); // ready
+</script>
+</head>
+<body>
+	<button>click</button>
+	<div>
+		<span>javascript</span>
+	</div>
+	<input type="text" value="jquery" />
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
