@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery018_insertefore</title>
+<style type="text/css">
+</style>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+	$(document).ready(function() {
+		$("button:nth-of-type(1)").click(function() {
+			//$("기존요소").before("추가요소");
+			//$("#myList").before("<li>first</li>")
+			//$("추가요소").insertBefore("기존요소");
+			//$("<li>first</li>").insertBefore("#myList");
+
+			//$("기존요소").after("추가요소");
+			//$("#myList").after("<li>after</li>")
+			//$("추가요소").insertAfter("기존요소");
+			$("<li>after</li>").insertAfter("#myList");
+
+		});
+		
+		$("button:nth-of-type(2)").click(function() {
+			// clone() : 선택한 요소를 복사 한다.
+			// 첫번째 ul의 자식 요소들을 복사 한다.
+			var copy = $("ul:nth-of-type(1)").children().clone();
+			$("ul:nth-of-type(2)").append(copy);
+
+		});
+
+	}); // ready
+</script>
+</head>
+<body>
+	<button>click</button>
+	<button>clone</button>
+	<ul>
+		<li id="myList">content</li>
+	</ul>
+	
+	<ul>
+		
+	</ul>
+	
+</body>
+</html>
