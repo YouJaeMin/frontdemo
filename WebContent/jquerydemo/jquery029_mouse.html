@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery029_mouse</title>
+<style type="text/css">
+
+div{
+	width: 100px;
+	height: 200px;
+	background-color: yellow;
+}
+
+</style>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+	$(document).ready(function() {
+		$("div").mousedown(function() {
+			$(this).append("<span>down</span>");
+		});
+		
+		$("div").mouseup(function() {
+			$(this).append("<span>up</span>");
+		});	
+	});
+</script>
+</head>
+<body>
+	<div></div>
+</body>
+</html>
