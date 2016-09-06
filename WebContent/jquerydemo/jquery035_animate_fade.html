@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery035_animate_fade</title>
+<style type="text/css">
+
+</style>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+/*
+ * fadeIn("효과속도", 콜백함수); 점점 선명해진다.
+ 	fadeOut("효과속도", 콜백함수); 점점 투명해진다.
+ 	fadeToggle("효과속도", 콜백함수); 투명과 불투명
+ 	fadeTo("효과속도", 투명도, 콜백함수);
+ 	-> 투명도는 0부터 1까지 지정한다. 1에 가까울수록 선명해진다.
+ 		50%만큼 투명도를 적용하면 0.5를 입력한다.
+ */
+	$(document).ready(function() {
+		$("#btnin").click(function() {
+			$("img").fadeIn("slow", function() {
+				alert("fadeIn 완료");
+			});
+		});
+
+		$("#btnout").click(function() {
+			$("img").fadeOut("slow");
+		});
+
+		$("#btntoggle").click(function() {
+			$("img").fadeToggle("normal", function() {
+				alert("end");
+			});
+		});
+		
+		$("#btnto").click(function() {
+			$("img").fadeTo("slow", 0.3);
+		});
+		
+		
+	});
+</script>
+</head>
+<body>
+	<button id="btnin">in</button>
+	<button id="btnout">out</button>
+	<button id="btntoggle">toggle</button>
+	<button id="btnto">to</button>
+	<br />
+	<img alt="" src="../images/aa.jpg">
+
+
+</body>
+</html>
