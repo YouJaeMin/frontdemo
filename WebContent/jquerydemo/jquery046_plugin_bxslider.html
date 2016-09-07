@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery046_plugin_bxslider</title>
+<link rel="stylesheet" href="css/ui-lightness/jquery.bxslider.css"
+	type="text/css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$('.bxslider').bxSlider({
+			pagerCustom : '#bx-pager'
+		});
+	});
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+	<div class="slider">
+		<ul class="bxslider">
+			<li><img src="../images/pic_1.jpg" /></li>
+			<li><img src="../images/pic_2.jpg" /></li>
+			<li><img src="../images/pic_3.jpg" /></li>
+		</ul>
+
+		<div id="bx-pager">
+			<a data-slide-index="0" href=""><img src="../images/pic_t1.jpg" /></a>
+			<a data-slide-index="1" href=""><img src="../images/pic_t2.jpg" /></a>
+			<a data-slide-index="2" href=""><img src="../images/pic_t3.jpg" /></a>
+		</div>
+
+	</div>
+</body>
+</html>
